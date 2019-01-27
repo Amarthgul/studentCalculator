@@ -1,3 +1,6 @@
+import re
+
+
 def R(*args):
     '''Calculate Resistance given volt and ampere, return unit in Ohm
     '''
