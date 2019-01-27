@@ -1,7 +1,6 @@
 ﻿# Numpy And Matplotlib Tools
 
-I found that I always come into this circusmustance:
-  I need to implement something, like draw a 3d cylinder in matplotlib. Fairly speaking it's not difficult but may take some effort. Yet there's no built-in cylinder, and to calculate it's cordinates is bit annoying.
+I always neeed to plot something, like a 3d cylinder in matplotlib. Fairly speaking it's not difficult but may take some effort. Yet there's no built-in cylinder, and to calculate its cordinates is annoying.
   
 So I came up with this, some small tools that you may use.
 
