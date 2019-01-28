@@ -1,0 +1,1 @@
+Placing images
