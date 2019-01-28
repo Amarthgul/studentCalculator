@@ -11,7 +11,7 @@ def comba(k, n):
     '''Combination. Select k from n, without order. '''
     return factorial(n) / (factorial(n - k) * factorial(k));
 
-def sciConvert(num, powerBase = 2, power = 10, precision = 4):
+def sciConvert(num, powerBase = 10, power = 2, precision = 4):
     '''Convert a number into scientific format. 
 num: number to be converted;
 powerBase: the base of power;
@@ -21,7 +21,7 @@ precision: if there's float point, then count number after the float point.
     result = ""
     base = str(num / (powerBase ** power)) + "0" * precision
     if base.find("."):
-        base = base[base.find("."): base.find(".") + precision + 1]
+        base = base[0: base.find(".") + precision + 1]
     else: base = base[: precision]
     result += base + " * " + str(powerBase) + " ^ " + str(power)
     return result
