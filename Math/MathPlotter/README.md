@@ -54,6 +54,22 @@ Given initial position and redius, generate a sphere.
 ### getCubeByAxis()
 Given the position of one corner point and length/height/width, generate a cube.
 
+For example:
+
+    import matplotlib.pyplot as plt
+    import mpl_toolkits.mplot3d 
+
+    fig = plt.figure(figsize = (23, 20))
+    ax = plt.axes(projection = '3d')
+    x, y, z = getPlaneByEqu("12 * (x - 22) + 3*(y - 13.8) + 4.7*(z -30) = 0 ")
+    ax.plot_surface(x, y, z, rstride = 1, cstride = 1, linewidth = 0, cmap='coolwarm')
+    plt.show()
+
+Will yield this:
+
+<img src="https://github.com/Amarthgul/studentCalculator/blob/master/Resources/STDTLdemoPlotOne.png" width="400" height="400">
+
+
 ## Numpy Tools:
 
 ### regMatrix()
