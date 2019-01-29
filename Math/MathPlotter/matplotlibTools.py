@@ -286,30 +286,29 @@ def simpleLinearbyEqu2D(inStr, start = 0, end = 10, divd = 20):
 Generate the x and y coordinate for a given linear formula. 
 inStr:  input equation, multiple forms recognizable:
     y = 0.5x + 4
-    3.7- 2x
+    3.7- 2/3x
     3.6 * x
 start: where to start;
 end: where to end;
 sample: how many intervals are there;
     '''
-    aPattern = re.compile(r"([-| ]*\d+\.?\d*)[ |\*]*([x|X])")
-    bPattern = re.compile(r"([-| ]*\d+\.?\d*)[\+|-| ]?")
-
+    aPattern = re.compile(r"([-| ]*\d+\.?\d* */? *\d*)[ |\*]*([x|X])")
+    bPattern = re.compile(r"([-| ]*\d+\.?\d* */? *\d*)[\+|-| ]?")
+    
     a = re.findall(aPattern, inStr)
     b = re.findall(bPattern, inStr)
     a = [ i. replace(" ", "")for i in a[0]]
     
-    if len(a) - 1: aValue = float(a[0])
+    if len(a) - 1: aValue = eval(a[0])
     else: aValue = 1
 
     if len(b):
         b = [i.replace(" ", "") for i in b]
-        bValue = [float(i) for i in b]
+        bValue = [eval(i) for i in b]
         bValue.remove(aValue)
         if len(bValue): bValue = bValue[0]
         else: bValue = 0
         
-    #print("A and b vale: ", aValue, bValue)
     sample = np.linspace(start, end, divd)
     return sample, aValue * sample + bValue
 
