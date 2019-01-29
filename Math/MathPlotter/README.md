@@ -74,7 +74,7 @@ Generate the x and y coordinate for a given linear formula.
 Supported equations:
 
     y = 0.5x + 4
-    3.7- 2x
+    3.7- 2/3x
     3.6 * x
     
 For example:
