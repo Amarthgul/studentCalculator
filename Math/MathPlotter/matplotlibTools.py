@@ -1,5 +1,7 @@
 import re
 import numpy as np
+import matplotlib.pyplot as plt
+
 
 def getCynByAxis(redius = 1, heightStart = 0, heightEnd = 5, \
     offset = [0, 0, 0], devision = 20, mainAxis = 'z'):
@@ -82,7 +84,7 @@ devision: devision of the cylinder
             for _ in i[0]: coefficients[k].append(eval(_) if _ else 1)
            
        
-    redius = findRedius ** (1. / list(coefficients.values())[0][2])
+    redius = findRedius ** (1.0 / list(coefficients.values())[0][2])
     theta = np.linspace(0, 2*np.pi, devision)
     axisOne = redius * np.cos(theta)
     axisVer = np.linspace(-10 * scale, 10 * scale, devision)
@@ -97,7 +99,7 @@ devision: devision of the cylinder
         Y = axisVer
         X = axisOne / coefficients['x'][0] - coefficients['x'][1]
         Z = axisTwo / coefficients['z'][0] - coefficients['z'][1]
-    elif axis == 'z':
+    else:
         Z = axisVer
         Y = axisOne / coefficients['y'][0] - coefficients['y'][1]
         X = axisTwo / coefficients['x'][0] - coefficients['x'][1]
@@ -237,7 +239,7 @@ forthPara: the 4th parameter besides x, y and z, literally useless
     recognized = False; paraCoe = []
     
     #=================Parametric Form=================
-    basicPattern = r'{}\s*=\s*\+?(\-?\s*\d*\.*\d*)?\s*\+?(\-?\s*\d*\.*\d*)\s*\*?\s*'+forthPara
+    basicPattern = r'{}\s*=\s*\+?(\-?\s*\d*\.*\d*)?\s*\+?(\-?\s*\d*\.*\d*)\s*\*?\s*' + forthPara
     cor = ['x0', 'a', 'y0', 'b', 'z0', 'c']
     for index in indexVar:
         try: paraCoe.extend(re.findall(basicPattern.format(index), inStr)[0])
@@ -278,3 +280,66 @@ forthPara: the 4th parameter besides x, y and z, literally useless
     Y = paraCoe['y0'] + paraCoe['b']*t
     Z = paraCoe['z0'] + paraCoe['c']*t
     return X, Y, Z
+
+def simpleLinearbyEqu2D(inStr, start = 0, end = 10, divd = 20):
+    '''
+Generate the x and y coordinate for a given linear formula. 
+inStr:  input equation, multiple forms recognizable:
+    y = 0.5x + 4
+    3.7- 2x
+    3.6 * x
+start: where to start;
+end: where to end;
+sample: how many intervals are there;
+    '''
+    aPattern = re.compile(r"([-| ]*\d+\.?\d*)[ |\*]*([x|X])")
+    bPattern = re.compile(r"([-| ]*\d+\.?\d*)[\+|-| ]?")
+
+    a = re.findall(aPattern, inStr)
+    b = re.findall(bPattern, inStr)
+    a = [ i. replace(" ", "")for i in a[0]]
+    
+    if len(a) - 1: aValue = float(a[0])
+    else: aValue = 1
+
+    if len(b):
+        b = [i.replace(" ", "") for i in b]
+        bValue = [float(i) for i in b]
+        bValue.remove(aValue)
+        if len(bValue): bValue = bValue[0]
+        else: bValue = 0
+        
+    #print("A and b vale: ", aValue, bValue)
+    sample = np.linspace(start, end, divd)
+    return sample, aValue * sample + bValue
+
+
+'''========================================='''
+#==============================================
+def simplePlot3D(*args):
+    import mpl_toolkits.mplot3d 
+
+    fig = plt.figure(figsize = (23, 20))
+    ax = plt.axes(projection = '3d')
+    x, y, z = getPlaneByEqu("12 * (x - 22) + 3*(y - 13.8) + 4.7*(z -30) = 0 ")
+    ax.plot_surface(x, y, z, rstride = 1, cstride = 1, linewidth = 0, cmap='coolwarm')
+    plt.show()
+    return 0
+
+def simplePlot2D():
+    x, y = simpleLinearbyEqu2D("3.6 * x")
+    #print(x, y)
+    plt.plot(x, y)
+    plt.show()
+
+
+
+
+def main():
+    
+    simplePlot2D()
+
+if __name__ == "__main__":
+    main()
+
+
