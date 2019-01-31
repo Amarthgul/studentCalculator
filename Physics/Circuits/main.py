@@ -85,3 +85,29 @@ def V(*args):
         amp = backupList[0]; ohm = backupList[1]
 
     return amp * ohm;
+
+
+def P(*args):
+    '''
+Calculate electric power using any aviliable parameter. Resistive circuit only.    
+    '''
+    def extractNum(inStr):
+        numStr = re.findall(r"(\d+\.?\d*|\d+)", inStr)[0]
+        return float(numStr)
+    
+    patterns = {"volt": r"([U|u|V|v] *=* *\d+\.?\d*|\d+\.?\d* *[V|v|olt])",
+                "amp": r"([I|i] *=* *\d+\.?\d*|\d+\.?\d* *[A|a])",
+                "ohm": r"(R|r] *=* *\d+\.?\d*|\d+\.?\d* *[O|o|Ω])"};
+    strs = {"volt": None, "amp": None, "ohm": None};
+    values = {"volt": None, "amp": None, "ohm": None}
+    
+    for i in args:
+        if isinstance(i, str):
+            for para in patterns:
+                strs[para] = re.findall(re.compile(patterns[para]), i)
+                if len(strs[para]): values[para] = extractNum(strs[para][0])
+            
+    #print(values)
+    if values["ohm"] == None: return values["volt"] * values["amp"];
+    elif values["volt"] == None: return values["amp"] ** 2 * values["ohm"];
+    else: return (values["volt"] ** 2) / values["ohm"]
