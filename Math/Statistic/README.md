@@ -22,6 +22,26 @@ Combination. Select `k` from `n`, without order.
 comba(2, 10)  # returns 45
 ```
 
+**bino(x, n, p):**
+
+Binomial porbablity.
+
+<img src="https://github.com/Amarthgul/studentCalculator/blob/master/Resources/binomial.gif">
+
+```python
+bino(2, 4, 0.8) # returns 0.15359999999999996
+```
+
+**pois(x, mu, useMathPkg = False):**
+
+Poisson distributation.
+
+<img src="https://github.com/Amarthgul/studentCalculator/blob/master/Resources/possion.gif">
+
+```python
+pois(0, 3) #returns 0.04978706836786395
+```
+
 **sciConvert():**
 
 Convert a number into scientific format.
