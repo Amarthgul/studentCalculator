@@ -42,6 +42,18 @@ Poisson distributation.
 pois(0, 3) #returns 0.04978706836786395
 ```
 
+**unifDist**
+
+Class of uniform distribution.
+
+```python
+a = unifDist(0.5, 2)         # starts at 0.5, ends at 2
+a.probBetween(0.75, 1.25)    # returns 0.3333333333333333 
+a.probAbove(0.75)            # returns 0.8333333333333333
+a.probBelow(0.75)            # returns 0.1666666666666666
+a.probBelow(0.25)            # returns 0
+```
+
 **sciConvert():**
 
 Convert a number into scientific format.
