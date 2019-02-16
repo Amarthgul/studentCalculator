@@ -22,3 +22,9 @@ def regMatrix(inStr, align = False):
             find[index].extend([None for i in range(maxLength - len(find[index]))])
 
     return find
+
+
+def regToExcel(inStr, headers = False, columnNames = False):
+    import pandas as pd
+    matrix = pd.DataFrame(regMatrix(inStr))
+    matrix.to_excel("output.xlsx", header = headers, index = columnNames)
