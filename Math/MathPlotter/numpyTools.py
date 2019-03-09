@@ -1,3 +1,7 @@
+'''
+Last update 3/9/2019
+'''
+
 def regMatrix(inStr, align = False):
     '''return float type matrix, default return float
     inStr: input string
