@@ -32,3 +32,5 @@ def regToExcel(inStr, headers = False, columnNames = False):
     import pandas as pd
     matrix = pd.DataFrame(regMatrix(inStr))
     matrix.to_excel("output.xlsx", header = headers, index = columnNames)
+    
+    return matrix;
