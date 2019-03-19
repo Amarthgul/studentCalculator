@@ -68,6 +68,6 @@ sciConvert(12345, powerBase = 2, power = 10, precision = 6)  # returns "12.05566
 Return the standard normal distribution value. `closest` controls whether to round down or find the cloest vlaue
 
 ```python
-normalDist(0.236)                   # rounded to 0.23, returns 0.59483
-normalDist(0.236, closest = False)  # rounded as 0.24, returns 0.59095
+normalDist(0.236)                   # rounded as 0.24, returns 0.59483
+normalDist(0.236, closest = False)  # rounded to 0.23, returns 0.59095
 ```
