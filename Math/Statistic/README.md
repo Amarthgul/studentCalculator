@@ -54,11 +54,20 @@ a.probBelow(0.75)            # returns 0.1666666666666666
 a.probBelow(0.25)            # returns 0
 ```
 
-**sciConvert():**
+**sciConvert(num):**
 
 Convert a number into scientific format.
 
 ```python
 sciConvert(12345)  # returns "123.4500 * 10 ^ 2"
 sciConvert(12345, powerBase = 2, power = 10, precision = 6)  # returns "12.055664 * 2 ^ 10"
+```
+
+**normalDist(z, closest = True)**
+
+Return the standard normal distribution value. `closest` controls whether to round down or find the cloest vlaue
+
+```python
+normalDist(0.236)                   # returns 0.59483
+normalDist(0.236, closest = False)  # returns 0.59095
 ```
