@@ -71,3 +71,23 @@ Return the standard normal distribution value. `closest` controls whether to rou
 normalDist(0.236)                   # rounded as 0.24, returns 0.59483
 normalDist(0.236, closest = False)  # rounded to 0.23, returns 0.59095
 ```
+
+**CI(precent, sigma, n, xHat)**
+
+Find the confidence interval with given conditions. Note that although the 1st parameter is called `precent`, it requires a number in [0, 1].
+
+<img src="https://github.com/Amarthgul/studentCalculator/blob/master/Resources/CI.gif">
+
+```python
+CI(0.99, 3.3, 100, 52.2)            # returns [51.348600000000005, 53.0514]
+```
+
+**sampleNeedForCI(precent, sigma, w)**
+
+Complute number of samples needed for a certain CI.
+
+<img src="https://github.com/Amarthgul/studentCalculator/blob/master/Resources/sampleNeeded.gif">
+
+```python
+sampleNeedForCI(0.99, 3.3, 1)      # returns 289.95278399999995
+```
