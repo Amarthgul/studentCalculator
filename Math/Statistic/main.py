@@ -61,3 +61,46 @@ def normalDist(z, closest = True):
     pt2 = (round(z % 0.1, 3) - round(z % 0.01, 4));
     if closest: pt2 = (round(z % 0.1, 2))
     return chart.loc[[pt1]][[pt2]]
+
+def cutPrecision(num, digAfterPt):
+    '''My implementation of `round()`'''
+    strVer = str(num)
+    for i in range(len(strVer)):
+        if strVer[i] == ".": index = i;
+    strVer = strVer[:index + digAfterPt + 1]
+    num = float(strVer)
+    return num
+    
+def normalDist(z, closest = True):
+    '''Standard normal distribution'''
+    if z < -4.0: return 0 
+    elif z == 0: return 0.5
+    chart = loadPickle();
+    pt1 = cutPrecision(z, 1)
+    pt2 = abs((cutPrecision(Decimal(str(z)) % Decimal('0.1'), 2)))
+    if closest and cutPrecision(Decimal(str(z)) % Decimal('0.01'), 3) > Decimal('0.05'):
+        pt2 += 0.01;
+    pt2 = float(pt2)
+    return chart.loc[[pt1]][[pt2]].values[0][0]
+    
+def revNormalDist(prob, low = -3.99, high = 3.99, mid = 0):
+    '''Reversed std normal distribution, given probablity, calculate z'''
+    if (normalDist(mid + 0.01) > prob) and (normalDist(mid - 0.01) < prob):
+        return cutPrecision(mid, 2)
+    if (normalDist(mid) > prob):
+        high = mid
+    elif (normalDist(mid) < prob):
+        low = mid 
+    mid = (low + high) / 2;
+    return revNormalDist(prob, low, high, mid)
+    
+def CI(precent, sigma, n, xHat):
+    '''Confidence interval
+Note that `precent` need to be samller than 1
+    '''
+    uniPart = revNormalDist((1 - precent)/2) * sigma / math.sqrt(n)
+    return sorted([xHat - uniPart, xHat + uniPart])
+
+def sampleNeedForCI(precent, sigma, w):
+    '''Number of sample need for certain CI'''
+    return (2 * revNormalDist((1 - precent)/2) * sigma / w) ** 2
