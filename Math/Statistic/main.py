@@ -1,4 +1,12 @@
 import math
+import pandas as pd
+import pickle
+
+def loadPickle():
+    with open('chart.pkl', 'br') as f:
+        dataSet = pickle.load(f)
+    return dataSet
+
 
 def factorial(input):
     '''Compute factorial of a non-negtative number'''
@@ -45,3 +53,13 @@ class unifDist():
         return (self.__end - self.__start)**2 / 12;
     def stdev(self):
         return math.sqrt(self.variance())
+
+def normalDist(z, closest = True):
+    if z < -4.0: return 0 
+    chart = loadPickle();
+    pt1 = round(z, 1);
+    if closest:
+        pt2 = round(z % 0.1, 2) + 0.01 if (round(z % 0.1, 3) > 0.05) else round(z % 0.1, 2);
+    else:
+        pt2 = round(z % 0.1, 2)
+    return chart.loc[[pt1]][[pt2]]
