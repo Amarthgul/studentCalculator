@@ -58,8 +58,6 @@ def normalDist(z, closest = True):
     if z < -4.0: return 0 
     chart = loadPickle();
     pt1 = round(z, 1);
-    if closest:
-        pt2 = round(z % 0.1, 2) + 0.01 if (round(z % 0.1, 3) > 0.05) else round(z % 0.1, 2);
-    else:
-        pt2 = round(z % 0.1, 2)
+    pt2 = (round(z % 0.1, 3) - round(z % 0.01, 4));
+    if closest: pt2 = (round(z % 0.1, 2))
     return chart.loc[[pt1]][[pt2]]
