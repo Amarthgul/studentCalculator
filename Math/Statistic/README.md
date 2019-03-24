@@ -91,3 +91,21 @@ Complute number of samples needed for a certain CI.
 ```python
 sampleNeedForCI(0.99, 3.3, 1)      # returns 289.95278399999995
 ```
+
+**propCI(n, passed, precent)**
+
+CI for a population proportion p
+
+<img src="https://github.com/Amarthgul/studentCalculator/blob/master/Resources/popuPropCI.gif">
+
+**TCI(precent, stdev, n, mean, tCritical)**
+
+CI for t-distribution. Currently need the user enter t-critical value.
+
+<img src="https://github.com/Amarthgul/studentCalculator/blob/master/Resources/TCI.gif">
+
+**PI(precent, stdev, n, mean, tCritical)**
+
+Prediction Interval. Currently need the user enter t-critical value.
+
+<img src="https://github.com/Amarthgul/studentCalculator/blob/master/Resources/PI.gif">
