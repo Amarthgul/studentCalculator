@@ -104,3 +104,28 @@ Note that `precent` need to be samller than 1
 def sampleNeedForCI(precent, sigma, w):
     '''Number of sample need for certain CI'''
     return (2 * revNormalDist((1 - precent)/2) * sigma / w) ** 2
+
+def propCI(n, passed, precent):
+    ''' CI for a population proportion p '''
+    pHat = passed / n;
+    zHalf = revNormalDist((1 - precent)/2)
+    left = (pHat + zHalf**2 / (2*n)) / (1 + zHalf**2 / n)
+    right = zHalf * (math.sqrt(pHat*(1-pHat)/n + (zHalf**2)/(4*n**2) ) / (1 + zHalf**2 / n))
+    return sorted([left - right, left + right])
+
+def propCIPlusFour(n, passed, precent):
+    ''' CI Alternate version '''
+    zHalf = revNormalDist((1 - precent)/2)
+    p = (passed + 2) / (n + 4)
+    right = zHalf * math.sqrt((p * (1-p)) / (n))
+    return sorted([p - right, p + right])
+
+def TCI(precent, stdev, n, mean, tCritical):
+    ''' CI for T distribution '''
+    right = tCritical * (stdev / math.sqrt(n))
+    return sorted([mean - right, mean + right])
+
+def PI(precent, stdev, n, mean, tCritical):
+    ''' Prediction Interval '''
+    right = tCritical * stdev * math.sqrt(1 + 1/n)
+    return sorted([mean - right, mean + right])
