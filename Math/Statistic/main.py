@@ -129,3 +129,82 @@ def PI(precent, stdev, n, mean, tCritical):
     ''' Prediction Interval '''
     right = tCritical * stdev * math.sqrt(1 + 1/n)
     return sorted([mean - right, mean + right])
+
+
+class linearReg():
+    def __init__(self, inDataX = [1, 2, 3, 4, 5], inDataY = [0, 1, 2, 3, 4]):
+        self.dataX = np.array(inDataX);
+        self.dataY = np.array(inDataY);
+        self.meanX = np.average(self.dataX);
+        self.meanY = np.average(self.dataY);
+        self.n = len(self.dataX);
+        self.__Sxx = self.Sxx();
+        self.__Syy = self.Syy();
+        self.__Sxy = self.Sxy();
+        self.__betaH1 = self.betaH1();
+        self.__betaH0 = self.betaH0();
+        self.__yH = self.yH();
+        self.__b1 = self.__betaH1; # alias of betaH1
+        self.__b0 = self.__betaH0; # alias of betaH1
+        self.__SSE = self.SSE();
+        self.__SST = self.SST();
+        self.__SSR = self.SSR();
+        self.__sigmaH2 = self.sigmaH2();
+        self.__s2 = self.s2();
+        self.__r2 = self.r2();
+        self.__vBetaH1 = self.vBetaH1();
+        self.__stdBetaH1 = self.stdBetaH1();
+        self.__r = self.r();
+        self.__T = self.T();
+    
+    def Sxx(self):
+        return sum((self.dataX - self.meanX) ** 2);
+    def Syy(self):
+        return sum((self.dataY - self.meanY) ** 2);
+    def Sxy(self):
+        return sum((self.dataY - self.meanY) * (self.dataX - self.meanX));
+    
+    def r(self):
+        return self.__Sxy / (np.sqrt(self.__Sxx) * np.sqrt(self.__Syy));
+    def betaH1(self):
+        return self.__Sxy / self.__Sxx;
+    def betaH0(self):
+        return self.meanY - self.__betaH1 * self.meanX;
+    def yH(self):
+        return self.__betaH0 + self.__betaH1 * self.dataX;
+    def yHi(self, i, enableRange = False):
+        '''y value at position i'''
+        if enableRange and (i > max(self.dataX) or i < min(self.dataX)):
+            raise Exception("Cannot predict because out of range. ");
+        return self.__betaH0 + self.__betaH1 * i;
+    
+    def SSE(self):
+        '''Error sum of squares'''
+        return sum((self.dataY - self.__yH) ** 2);
+    def SST(self):
+        '''Total sum of squares'''
+        return self.__Syy;
+    def SSR(self):
+        '''Regression sum of squares'''
+        return self.__SST - self.__SSE;
+    def sigmaH2(self):
+        return self.__SSE / (self.n - 2);
+    def s2(self):
+        return self.__sigmaH2;
+    def r2(self):
+        '''Coefficient of determination'''
+        return 1 - self.__SSE / self.__SST;
+    def r(self):
+        '''Sample correlation coefficient'''
+        return self.__Sxy / np.sqrt(self.__Sxx * self.__Syy)
+    def vBetaH1(self):
+        '''Variance of beta hat 1'''
+        return self.__sigmaH2 / self.__Sxx;
+    def stdBetaH1(self):
+        '''Standard deviation of of beta hat 1'''
+        return np.sqrt(self.__sigmaH2 / self.__Sxx)
+    def T(self):
+        return (self.__r*np.sqrt(self.n-2)) / (np.sqrt(1 - self.__r2))
+    def CI(self, tValue):
+        return [self.__betaH1 - tValue * self.__stdBetaH1, 
+               self.__betaH1 + tValue * self.__stdBetaH1]
