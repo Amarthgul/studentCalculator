@@ -15,8 +15,6 @@ An event is simple if it consists of exactly one outcome and compound if it cons
 
 When an _intersection results in no outcome_, we call it **Mutually Exclusive**. Note that mutually exclusive events _never happens together_, and mutually exclusive _does not mean dependent_. 
 
-# Counting #
-
 **factorial(n):**  
 Calculate factorial of `n`  
 ```python  
@@ -43,8 +41,6 @@ Convert a number into scientific format. Not in any STAT textbook.
 sciConvert(12345)  # returns "123.4500 * 10 ^ 2"
 sciConvert(12345, powerBase = 2, power = 10, precision = 6)  # returns "12.055664 * 2 ^ 10"
 ```
-
-# Probability #
 
 The **Conditional Probability** of `A` given that `B` has occured is:   
 <img src="https://github.com/Amarthgul/studentCalculator/blob/master/Resources/2_cp.gif">   
@@ -156,6 +152,12 @@ Given a collection of n random variables `X1, ..., Xn` and `n` numerical constan
 &nbsp; &nbsp; <img src="https://github.com/Amarthgul/studentCalculator/blob/master/Resources/5_lnrexp.gif" width="350">   
 &nbsp; &nbsp; The **Variance** of `Xi`, _only if they are independent_, is defined as:  
 &nbsp; &nbsp; <img src="https://github.com/Amarthgul/studentCalculator/blob/master/Resources/5_lnev.gif" width="350">   
+
+# Point Estimation #  
+
+A **point estimate** of a parameter `θ` is a single number that can be regarded as a sensible value for `θ`. It is obtained by selecting a suitable statistic and computing its value from the given sample data. The selected statistic is called the **point estimator of θ**. 
+
+A point estimator <img src="https://github.com/Amarthgul/studentCalculator/blob/master/Resources/6_tht.gif" width="10"> is said to be an **Unbiased Estimator** of `θ`  if <img src="https://github.com/Amarthgul/studentCalculator/blob/master/Resources/6_unb1.gif" width="65"> for every possible value of `θ`. If <img src="https://github.com/Amarthgul/studentCalculator/blob/master/Resources/6_tht.gif" width="10"> is not unbiased, the difference <img src="https://github.com/Amarthgul/studentCalculator/blob/master/Resources/6_unb2.gif" width="65"> is called the **Bias** of <img src="https://github.com/Amarthgul/studentCalculator/blob/master/Resources/6_tht.gif" width="10">.
 
 # Statistical Intervals #
 
