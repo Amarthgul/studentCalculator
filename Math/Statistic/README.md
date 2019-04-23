@@ -86,8 +86,8 @@ bino(2, 4, 0.8) # returns 0.15359999999999996
 ```
 
 **Poisson distributation**   
-`pois(x, mu, useMathPkg = False)`
-<img src="https://github.com/Amarthgul/studentCalculator/blob/master/Resources/possion.gif">  
+`pois(x, mu, useMathPkg = False)`   
+<img src="https://github.com/Amarthgul/studentCalculator/blob/master/Resources/possion.gif">   
 ```python
 pois(0, 3) #returns 0.04978706836786395
 ```
@@ -102,6 +102,9 @@ a.probBelow(0.75)            # returns 0.1666666666666666
 a.probBelow(0.25)            # returns 0
 ```
 
+**Normal Distribution**  
+<img src="https://github.com/Amarthgul/studentCalculator/blob/master/Resources/2_nmd.gif" width="100">  
+
 **Standard Normal Distribution**   
 `normalDist(z, closest = True)`: return the standard normal distribution value. `closest` controls whether to round down or find the cloest vlaue  
 <img src="https://github.com/Amarthgul/studentCalculator/blob/master/Resources/3_nd.gif" width="150">    
@@ -111,6 +114,7 @@ Where as:
 normalDist(0.236)                   # rounded as 0.24, returns 0.59483
 normalDist(0.236, closest = False)  # rounded to 0.23, returns 0.59095
 ```
+# Joint Probability Distributions and Random Samples #
 
 **Marginal Probability Mass Function of X**  
 Applies for two discrete random Variables:  
@@ -138,6 +142,20 @@ Note that:
 1. `-1 <= ρ <= 1`, two variables are said to be **uncorrelated** when `ρ = 0`.  
 2. If `X` and `Y` are _independent_, then `ρ = 0`, but `ρ = 0` _does not imply independence_.  
 3. `ρ = 1` or `-1` iff `Y = aX + b` for some numbers `a` and `b` with `a != 0`. aka. `ρ = 1` or `-1` indicates linear relationship.  
+
+A **Statistic** is any quantity whose value can be calculated from sample dat. 
+
+**The Central Limit Theorem (CLT)**  
+Let `X1, X2, ..., Xn` be a random sample from a distribution with mean `μ` and variance `σ^2`. Then if `n` is sufficiently large:  
+<img src="https://github.com/Amarthgul/studentCalculator/blob/master/Resources/5_clt.gif" width="100">    
+
+**Linear Combination**  
+Given a collection of n random variables `X1, ..., Xn` and `n` numerical constants `a1, ..., an`, the linear combination of the Xi is defined as:  
+<img src="https://github.com/Amarthgul/studentCalculator/blob/master/Resources/5_lnrc.gif" width="250">    
+&nbsp; &nbsp; The **Expectation** of `Xi`, _no matter they are independent or not_, is defined as:  
+&nbsp; &nbsp; <img src="https://github.com/Amarthgul/studentCalculator/blob/master/Resources/5_lnrexp.gif" width="350">   
+&nbsp; &nbsp; The **Variance** of `Xi`, _only if they are independent_, is defined as:  
+&nbsp; &nbsp; <img src="https://github.com/Amarthgul/studentCalculator/blob/master/Resources/5_lnev.gif" width="350">   
 
 # Statistical Intervals #
 
