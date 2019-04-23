@@ -90,24 +90,46 @@ Prediction Interval. Currently need the user enter t-critical value.
 
 # Simple Linear Regression and Correlation #
 
-**Model equation**
-Simple Linear Regression Model equation:
+**Model equation**  
+Simple Linear Regression Model equation:  
 <img src="https://github.com/Amarthgul/studentCalculator/blob/master/Resources/12_1_1.gif">  
+```python
+# initlize a linear regression model
+lnrModel = linearReg([1, 2, 3, 4, 5], [0.92, 2.03, 2.94, 4.10, 5.01]);
+```
 
 **self.Sxx()**  
-<img src="https://github.com/Amarthgul/studentCalculator/blob/master/Resources/12_sxx.gif">    
+Sum of the squares of the difference between each `x` and the _mean_ `x` value.  
+<img src="https://github.com/Amarthgul/studentCalculator/blob/master/Resources/12_sxx.gif">  
+```python
+lnrModel.Sxx()            # returns 10.0 in this case
+```
 
 **self.Syy()**  
+Sum of the squares of the difference between each `y` and the _mean_ `y` value.  
 <img src="https://github.com/Amarthgul/studentCalculator/blob/master/Resources/12_syy.gif"> 
+```python
+lnrModel.Syy()            # returns 10.520 in this case
+```
 
 **self.Sxy()**  
+Sum of the product of the difference between `x` its _means_ and the difference between `y` and its _mean_.  
 <img src="https://github.com/Amarthgul/studentCalculator/blob/master/Resources/12_sxy.gif">    
+```python
+lnrModel.Sxy()            # returns 10.25 in this case
+```
 
 **self.betaH1()**  
 The x coefficient  
 <img src="https://github.com/Amarthgul/studentCalculator/blob/master/Resources/12_bh1.gif">  
+```python
+lnrModel.betaH1()            # returns 1.025 in this case
+```
 
 **self.betaH0()**  
 The constant coefficient  
 <img src="https://github.com/Amarthgul/studentCalculator/blob/master/Resources/12_bh0.gif">    
+```python
+lnrModel.betaH0()            # returns -0.0750 in this case
+```
 
