@@ -1,8 +1,8 @@
 
-#dataPlot.py
+# dataPlot.py #
 
 Ploting data
-`
+```python
     theta = np.arange(60, 30, -5)
     I_muA = np.array([327, 322, 317, 312, 308, 303])
     
@@ -15,6 +15,6 @@ Ploting data
     fig.addLegend()
     fig.save()
     fig.showPlot()
-`
+```
 
 <img src="https://github.com/Amarthgul/studentCalculator/blob/master/Resources/dataPlotClass.png" width="400" height="300">
