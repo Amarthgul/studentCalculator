@@ -1,3 +1,20 @@
+# Intro #
+This is a summary for the `Probability and Statistics for Engineering` course. Contains contents covered in my class (OSU STAT 3470), as some of the basic concepts are relatively easy, I skipped part of them. 
+
+# Probability #
+
+The **Sample Space** of an experiment, denoted by `S`, 
+is the set of all possible outcomes of that experiment.  
+
+An **Event** is any collection (subset) of outcomes contained in the sample space `S`. 
+An event is simple if it consists of exactly one outcome and compound if it consists of more than one outcome.
+
+1. The **Complement** of an event `A`, denoted by `A'`, is the set of all outcomes in `S` that are not contained in `A`.
+2. The **Union** of two events `A` and `B`, denoted by `A ø B` and read “A or B,” is the event consisting of all outcomes that are either in `A` or in `B` or in both events (so that the union includes outcomes for which both `A` and `B` occur as well as outcomes for which exactly one occurs)—that is, all outcomes in at least one of the events.
+3. The **Intersection** of two events `A` and `B`, denoted by `A U B` and read “A and B” is the event consisting of all outcomes that are in both A and B. 
+
+When an _intersection results in no outcome_, we call it **Mutually Exclusive**. Note that mutually exclusive events _never happens together_, and mutually exclusive _does not mean dependent_. 
+
 # Counting #
 
 **factorial(n):**  
@@ -25,7 +42,27 @@ sciConvert(12345)  # returns "123.4500 * 10 ^ 2"
 sciConvert(12345, powerBase = 2, power = 10, precision = 6)  # returns "12.055664 * 2 ^ 10"
 ```
 
-# Probability Distributaion #
+# Probability #
+
+The **Conditional Probability** of `A` given that `B` has occured is:  
+<img src="https://github.com/Amarthgul/studentCalculator/blob/master/Resources/2_cp.gif">   
+
+**Bayes’ theorem**
+Let `A1, A2,…, Ak` be a collection of `k` mutually exclusive and exhaustive events 
+with prior probabilities `P(Ai) (i = 1, …, k)`. Then for any other event `B` for
+which `P(B) > 0`, the _posterior_ probability of `Aj` given that B has occurred is:  
+<img src="https://github.com/Amarthgul/studentCalculator/blob/master/Resources/2_cp.gif">   
+
+**Independent**  
+&nbsp; Two events `A` and `B` are independent if `P(A|B) = P(A)` and are dependent otherwise.   
+&nbsp; `A` and `B` are independent if and only if (iff) `P(A ∩ B) = P(A) • P(B)`  
+&nbsp; Verificatio: `P(A ∩ B) = P(A|B) • P(B) = P(A) • P(B)`
+
+# Discrete Random Variables and Probability Distributions #
+
+**Random Variables (rv)** is any rule that associates a number with each outcome in `S`.
+
+Any random variable whose only possible values are `0` and `1` is called a **Bernoulli random variable**.
 
 **bino(x, n, p):**  
 Binomial porbablity.  
