@@ -10,8 +10,8 @@ An **Event** is any collection (subset) of outcomes contained in the sample spac
 An event is simple if it consists of exactly one outcome and compound if it consists of more than one outcome.
 
 1. The **Complement** of an event `A`, denoted by `A'`, is the set of all outcomes in `S` that are not contained in `A`.
-2. The **Union** of two events `A` and `B`, denoted by `A ø B` and read “A or B,” is the event consisting of all outcomes that are either in `A` or in `B` or in both events (so that the union includes outcomes for which both `A` and `B` occur as well as outcomes for which exactly one occurs)—that is, all outcomes in at least one of the events.
-3. The **Intersection** of two events `A` and `B`, denoted by `A U B` and read “A and B” is the event consisting of all outcomes that are in both A and B. 
+2. The **Union** of two events `A` and `B`, denoted by `A U B` and read “A or B,” is the event consisting of all outcomes that are either in `A` or in `B` or in both events (so that the union includes outcomes for which both `A` and `B` occur as well as outcomes for which exactly one occurs)—that is, all outcomes in at least one of the events.
+3. The **Intersection** of two events `A` and `B`, denoted by `A ∩ B` and read “A and B” is the event consisting of all outcomes that are in both A and B. 
 
 When an _intersection results in no outcome_, we call it **Mutually Exclusive**. Note that mutually exclusive events _never happens together_, and mutually exclusive _does not mean dependent_. 
 
@@ -111,6 +111,33 @@ Where as:
 normalDist(0.236)                   # rounded as 0.24, returns 0.59483
 normalDist(0.236, closest = False)  # rounded to 0.23, returns 0.59095
 ```
+
+**Marginal Probability Mass Function of X**  
+Applies for two discrete random Variables:  
+<img src="https://github.com/Amarthgul/studentCalculator/blob/master/Resources/5_pxx.gif" width="200">  
+
+**Marginal Probability Mass Function of Y**  
+Applies for two discrete random Variables:  
+<img src="https://github.com/Amarthgul/studentCalculator/blob/master/Resources/5_pyy.gif" width="200">  
+
+**Covariance**  
+When two random variables X and Y are not independent, the covariance is defined as:  
+<img src="https://github.com/Amarthgul/studentCalculator/blob/master/Resources/5_cov.gif" width="250">   
+&nbsp; &nbsp; For **discrete** RV, covariance is calculated by:   
+&nbsp; &nbsp; <img src="https://github.com/Amarthgul/studentCalculator/blob/master/Resources/5_covd.gif" width="250">   
+&nbsp; &nbsp; For **continuous** RV, covariance is calculated by:   
+&nbsp; &nbsp; <img src="https://github.com/Amarthgul/studentCalculator/blob/master/Resources/5_covc.gif" width="300">   
+&nbsp; &nbsp; The simplified verison of covariance formula is:  
+&nbsp; &nbsp; <img src="https://github.com/Amarthgul/studentCalculator/blob/master/Resources/5_covSimp.gif" width="250">   
+
+**Correlation Coefficient**  
+For RV `X` and `Y`, the correlation coefficient is defined as the covariance divided by the product of 2 RVs' variance:    
+<img src="https://github.com/Amarthgul/studentCalculator/blob/master/Resources/5_corr.gif" width="250">  
+That character is pronounced as `rho`.     
+Note that:
+1. `-1 <= ρ <= 1`, two variables are said to be **uncorrelated** when `ρ = 0`.  
+2. If `X` and `Y` are _independent_, then `ρ = 0`, but `ρ = 0` _does not imply independence_.  
+3. `ρ = 1` or `-1` iff `Y = aX + b` for some numbers `a` and `b` with `a != 0`. aka. `ρ = 1` or `-1` indicates linear relationship.  
 
 # Statistical Intervals #
 
