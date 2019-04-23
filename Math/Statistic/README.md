@@ -25,12 +25,14 @@ factorial(6) # returns 720
 
 **permu(k, n):**  
 Permutation. Select `k` from `n`, with order.  
+<img src="https://github.com/Amarthgul/studentCalculator/blob/master/Resources/2_pm.gif">  
 ```python
 permu(2, 10)  # returns 90
 ```
 
 **comba(k, n):**  
 Combination. Select `k` from `n`, without order.  
+<img src="https://github.com/Amarthgul/studentCalculator/blob/master/Resources/2_cb.gif">  
 ```python
 comba(2, 10)  # returns 45
 ```
@@ -63,6 +65,18 @@ which `P(B) > 0`, the _posterior_ probability of `Aj` given that B has occurred 
 **Random Variables (rv)** is any rule that associates a number with each outcome in `S`.
 
 Any random variable whose only possible values are `0` and `1` is called a **Bernoulli random variable**.
+
+**Expected Value**  
+That Greek character is pronounced as `mu`.  
+<img src="https://github.com/Amarthgul/studentCalculator/blob/master/Resources/3_exp.gif"> 
+
+**Variance**  
+The expectation of the squared deviation of a random variable from its mean. That character is pronounced as `sigma`   
+<img src="https://github.com/Amarthgul/studentCalculator/blob/master/Resources/3_vr.gif"> 
+
+**Standard Deviation (SD)**  
+Is a measure that is used to quantify the amount of variation or dispersion of a set of data values. Calculated from the square root of variance.    
+<img src="https://github.com/Amarthgul/studentCalculator/blob/master/Resources/3_stdev.gif"> 
 
 **bino(x, n, p):**  
 Binomial porbablity.  
