@@ -23,15 +23,15 @@ Calculate factorial of `n`
 factorial(6) # returns 720
 ```
 
-**permu(k, n):**  
-Permutation. Select `k` from `n`, with order.  
+**Permutation.**  
+`permu(k, n)`: select `k` from `n`, with order.    
 <img src="https://github.com/Amarthgul/studentCalculator/blob/master/Resources/2_pm.gif">  
 ```python
 permu(2, 10)  # returns 90
 ```
 
-**comba(k, n):**  
-Combination. Select `k` from `n`, without order.  
+**Combination**  
+`comba(k, n)`: select `k` from `n`, without order.    
 <img src="https://github.com/Amarthgul/studentCalculator/blob/master/Resources/2_cb.gif">  
 ```python
 comba(2, 10)  # returns 45
@@ -46,10 +46,10 @@ sciConvert(12345, powerBase = 2, power = 10, precision = 6)  # returns "12.05566
 
 # Probability #
 
-The **Conditional Probability** of `A` given that `B` has occured is:  
+The **Conditional Probability** of `A` given that `B` has occured is:   
 <img src="https://github.com/Amarthgul/studentCalculator/blob/master/Resources/2_cp.gif">   
 
-**Bayes’ theorem**
+**Bayes’ theorem**   
 Let `A1, A2,…, Ak` be a collection of `k` mutually exclusive and exhaustive events 
 with prior probabilities `P(Ai) (i = 1, …, k)`. Then for any other event `B` for
 which `P(B) > 0`, the _posterior_ probability of `Aj` given that B has occurred is:  
@@ -66,34 +66,34 @@ which `P(B) > 0`, the _posterior_ probability of `Aj` given that B has occurred 
 
 Any random variable whose only possible values are `0` and `1` is called a **Bernoulli random variable**.
 
-**Expected Value**  
+**Expected Value**   
 That Greek character is pronounced as `mu`.  
 <img src="https://github.com/Amarthgul/studentCalculator/blob/master/Resources/3_exp.gif"> 
 
-**Variance**  
+**Variance**   
 The expectation of the squared deviation of a random variable from its mean. That character is pronounced as `sigma`   
 <img src="https://github.com/Amarthgul/studentCalculator/blob/master/Resources/3_vr.gif"> 
 
-**Standard Deviation (SD)**  
+**Standard Deviation (SD)**   
 Is a measure that is used to quantify the amount of variation or dispersion of a set of data values. Calculated from the square root of variance.    
 <img src="https://github.com/Amarthgul/studentCalculator/blob/master/Resources/3_stdev.gif"> 
 
-**bino(x, n, p):**  
-Binomial porbablity.  
+**Binomial Distributation**   
+`bino(x, n, p)`: `x`: number of succeed; `n`: total number of trials; `p`: probability.   
 <img src="https://github.com/Amarthgul/studentCalculator/blob/master/Resources/binomial.gif">  
 ```python
 bino(2, 4, 0.8) # returns 0.15359999999999996
 ```
 
-**pois(x, mu, useMathPkg = False):**  
-Poisson distributation.  
+**Poisson distributation**   
+`pois(x, mu, useMathPkg = False)`
 <img src="https://github.com/Amarthgul/studentCalculator/blob/master/Resources/possion.gif">  
 ```python
 pois(0, 3) #returns 0.04978706836786395
 ```
 
-**unifDist**  
-Class of uniform distribution.  
+**Uniform Distribution**   
+Class of `unifDist`  
 ```python
 a = unifDist(0.5, 2)         # starts at 0.5, ends at 2
 a.probBetween(0.75, 1.25)    # returns 0.3333333333333333 
@@ -102,8 +102,11 @@ a.probBelow(0.75)            # returns 0.1666666666666666
 a.probBelow(0.25)            # returns 0
 ```
 
-**normalDist(z, closest = True)**  
-Return the standard normal distribution value. `closest` controls whether to round down or find the cloest vlaue  
+**Standard Normal Distribution**   
+`normalDist(z, closest = True)`: return the standard normal distribution value. `closest` controls whether to round down or find the cloest vlaue  
+<img src="https://github.com/Amarthgul/studentCalculator/blob/master/Resources/3_nd.gif" width="150">    
+Where as:  
+<img src="https://github.com/Amarthgul/studentCalculator/blob/master/Resources/3_z.gif" width="75">    
 ```python
 normalDist(0.236)                   # rounded as 0.24, returns 0.59483
 normalDist(0.236, closest = False)  # rounded to 0.23, returns 0.59095
@@ -111,32 +114,30 @@ normalDist(0.236, closest = False)  # rounded to 0.23, returns 0.59095
 
 # Statistical Intervals #
 
-**CI(precent, sigma, n, xHat)**  
-Find the confidence interval with given conditions. Note that although the 1st parameter is called `precent`, it requires a number in [0, 1].  
+**Confidence Interval**   
+`CI(precent, sigma, n, xHat)`: Find the confidence interval with given conditions. Note that although the 1st parameter is called `precent`, it requires a number in [0, 1].  
 <img src="https://github.com/Amarthgul/studentCalculator/blob/master/Resources/CI.gif">  
 ```python
 CI(0.99, 3.3, 100, 52.2)            # returns [51.348600000000005, 53.0514]
 ```
 
-**sampleNeedForCI(precent, sigma, w)**  
-Complute number of samples needed for a certain CI.  
+**Number of Samples Needed**  
+`sampleNeedForCI(precent, sigma, w)`: Complute number of samples needed for a certain CI.  
 <img src="https://github.com/Amarthgul/studentCalculator/blob/master/Resources/sampleNeeded.gif">  
 ```python
 sampleNeedForCI(0.99, 3.3, 1)      # returns 289.95278399999995
 ```
 
-**propCI(n, passed, precent)**
-
-CI for a population proportion p
-
+**Population Proportion Confidence Interval**  
+`propCI(n, passed, precent)`: CI for a population proportion `p`  
 <img src="https://github.com/Amarthgul/studentCalculator/blob/master/Resources/popuPropCI.gif">
 
-**TCI(precent, stdev, n, mean, tCritical)**    
-CI for t-distribution. Currently need the user enter t-critical value.  
+**t-distribution Confidence Interval**    
+`TCI(precent, stdev, n, mean, tCritical)`: CI for t-distribution. Currently need the user enter t-critical value.  
 <img src="https://github.com/Amarthgul/studentCalculator/blob/master/Resources/TCI.gif">  
 
-**PI(precent, stdev, n, mean, tCritical)**  
-Prediction Interval. Currently need the user enter t-critical value.      
+**Prediction Interval**  
+`PI(precent, stdev, n, mean, tCritical)`: Currently need the user enter t-critical value.      
 <img src="https://github.com/Amarthgul/studentCalculator/blob/master/Resources/PI.gif">  
 
 # Simple Linear Regression and Correlation #
@@ -149,36 +150,36 @@ Simple Linear Regression Model equation:
 lnrModel = linearReg([1, 2, 3, 4, 5], [0.92, 2.03, 2.94, 4.10, 5.01]);
 ```
 
-**self.Sxx()**  
-Sum of the squares of the difference between each `x` and the _mean_ `x` value.  
+**Sxx**  
+`self.Sxx()`: Sum of the squares of the difference between each `x` and the _mean_ `x` value.  
 <img src="https://github.com/Amarthgul/studentCalculator/blob/master/Resources/12_sxx.gif">  
 ```python
 lnrModel.Sxx()            # returns 10.0 in this case
 ```
 
-**self.Syy()**  
-Sum of the squares of the difference between each `y` and the _mean_ `y` value.  
+**Syy**  
+`self.Syy()`: Sum of the squares of the difference between each `y` and the _mean_ `y` value.  
 <img src="https://github.com/Amarthgul/studentCalculator/blob/master/Resources/12_syy.gif"> 
 ```python
 lnrModel.Syy()            # returns 10.520 in this case
 ```
 
-**self.Sxy()**  
-Sum of the product of the difference between `x` its _means_ and the difference between `y` and its _mean_.  
+**Sxy**  
+`self.Sxy()`: Sum of the product of the difference between `x` its _means_ and the difference between `y` and its _mean_.  
 <img src="https://github.com/Amarthgul/studentCalculator/blob/master/Resources/12_sxy.gif">    
 ```python
 lnrModel.Sxy()            # returns 10.25 in this case
 ```
 
-**self.betaH1()**  
-The x coefficient  
+**The x Coefficient**  
+`self.betaH1()`
 <img src="https://github.com/Amarthgul/studentCalculator/blob/master/Resources/12_bh1.gif">  
 ```python
 lnrModel.betaH1()            # returns 1.025 in this case
 ```
 
-**self.betaH0()**  
-The constant coefficient  
+**The Constant Coefficient**  
+ `self.betaH0()`
 <img src="https://github.com/Amarthgul/studentCalculator/blob/master/Resources/12_bh0.gif">    
 ```python
 lnrModel.betaH0()            # returns -0.0750 in this case
