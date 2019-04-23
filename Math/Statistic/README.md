@@ -158,7 +158,7 @@ lnrModel.Sxx()            # returns 10.0 in this case
 ```
 
 **Syy**  
-`self.Syy()`: Sum of the squares of the difference between each `y` and the _mean_ `y` value.  
+`self.Syy()`: Sum of the squares of the difference between each `y` and the _mean_ `y` value.   
 <img src="https://github.com/Amarthgul/studentCalculator/blob/master/Resources/12_syy.gif"> 
 ```python
 lnrModel.Syy()            # returns 10.520 in this case
@@ -172,14 +172,14 @@ lnrModel.Sxy()            # returns 10.25 in this case
 ```
 
 **The x Coefficient**  
-`self.betaH1()`
+`self.betaH1()`   
 <img src="https://github.com/Amarthgul/studentCalculator/blob/master/Resources/12_bh1.gif">  
 ```python
 lnrModel.betaH1()            # returns 1.025 in this case
 ```
 
-**The Constant Coefficient**  
- `self.betaH0()`
+**The Constant Coefficient**   
+ `self.betaH0()`   
 <img src="https://github.com/Amarthgul/studentCalculator/blob/master/Resources/12_bh0.gif">    
 ```python
 lnrModel.betaH0()            # returns -0.0750 in this case
