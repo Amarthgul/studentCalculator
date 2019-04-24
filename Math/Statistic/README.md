@@ -71,7 +71,7 @@ The expectation of the squared deviation of a random variable from its mean. Tha
 <img src="https://github.com/Amarthgul/studentCalculator/blob/master/Resources/3_vr.gif"> 
 
 **Standard Deviation (SD)**   
-Is a measure that is used to quantify the amount of variation or dispersion of a set of data values. Calculated from the square root of variance.    
+Is a measure that is used to quantify the amount of variation or dispersion of a set of data values. Calculated from the square root of variance. The stdev for population is denoted by `σ` while the stdev for sample is denoted by `s`.     
 <img src="https://github.com/Amarthgul/studentCalculator/blob/master/Resources/3_stdev.gif"> 
 
 **Binomial Distributation**   
@@ -196,6 +196,9 @@ The `P-value` is the probability, calculated assuming that the **Null Hypothesis
 **Error**  
 A **Type I Error** consists of rejecting the null hypothesis `H0` when it is true.  
 A **Type II Error** involves not rejecting `H0` when it is fals.  
+
+**Test Statistic Value**  
+<img src="https://github.com/Amarthgul/studentCalculator/blob/master/Resources/12_zst.gif" width="150">  
 
 # Simple Linear Regression and Correlation #
 
