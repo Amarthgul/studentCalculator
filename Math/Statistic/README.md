@@ -187,6 +187,16 @@ sampleNeedForCI(0.99, 3.3, 1)      # returns 289.95278399999995
 `PI(precent, stdev, n, mean, tCritical)`: Currently need the user enter t-critical value.      
 <img src="https://github.com/Amarthgul/studentCalculator/blob/master/Resources/PI.gif">  
 
+**Test Statistic**  
+A test statistic is a function of the sample data used as a basis for deciding whether H0 should be rejected.  
+
+**P-value**    
+The `P-value` is the probability, calculated assuming that the **Null Hypothesis(H0)** is true. Always associated with `α`, called the **Significance Level** (alternatively, level of significance) of the test, that is reasonably close to 0. If `P-value` is bigger than `α`, then `H0` will not be rejected. 
+
+**Error**  
+A **Type I Error** consists of rejecting the null hypothesis `H0` when it is true.  
+A **Type II Error** involves not rejecting `H0` when it is fals.  
+
 # Simple Linear Regression and Correlation #
 
 **Model equation**  
@@ -199,7 +209,7 @@ lnrModel = linearReg([1, 2, 3, 4, 5], [0.92, 2.03, 2.94, 4.10, 5.01]);
 
 **Sxx**  
 `self.Sxx()`: Sum of the squares of the difference between each `x` and the _mean_ `x` value.  
-<img src="https://github.com/Amarthgul/studentCalculator/blob/master/Resources/12_sxx.gif" width="200">  
+<img src="https://github.com/Amarthgul/studentCalculator/blob/master/Resources/12_sxx.gif" width="300">  
 ```python
 lnrModel.Sxx()            # returns 10.0 in this case
 ```
