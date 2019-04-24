@@ -231,6 +231,40 @@ lnrModel.betaH1()            # returns 1.025 in this case
 ```python
 lnrModel.betaH0()            # returns -0.0750 in this case
 ```
+
+**SSE**  
+**E**rror sum of squares:    
+<img src="https://github.com/Amarthgul/studentCalculator/blob/master/Resources/12_sse.gif" width="150">    
+
+**SST**  
+**T**otal sum of squares:   
+<img src="https://github.com/Amarthgul/studentCalculator/blob/master/Resources/12_sst.gif" width="200">    
+
+**SSR**  
+**R**egression sum of squares:  
+<img src="https://github.com/Amarthgul/studentCalculator/blob/master/Resources/12_ssr.gif" width="250">    
+
+**r**
+Coefficient of determination. `0 <= r^2 <= 1`, it describes the linear relationship between y and x.   
+<img src="https://github.com/Amarthgul/studentCalculator/blob/master/Resources/12_r2.gif" width="200">  
+
+**Sxx**  
+<img src="https://github.com/Amarthgul/studentCalculator/blob/master/Resources/12_sxx.gif" width="300">    
+
+**Variance of beta1**  
+<img src="https://github.com/Amarthgul/studentCalculator/blob/master/Resources/12_var.gif" width="150"> 
+
+**Estimated Standard Deviation**  
+<img src="https://github.com/Amarthgul/studentCalculator/blob/master/Resources/12_sbh1.gif" width="100"> 
+
+**T**  
+The assumptions of the simple linear regression model imply that the standardized variable `T` has a t distribution with `n - 2` df.   
+<img src="https://github.com/Amarthgul/studentCalculator/blob/master/Resources/12_t.gif" width="200"> 
+
+**CI for Slope**  
+A `100(1 - α)%` CI for the slope `β1` of the true regression line is:   
+<img src="https://github.com/Amarthgul/studentCalculator/blob/master/Resources/12_cib1.gif" width="150"> 
+
 # Model Adequacy and Goodness-of-Fit #
 
 **Standardized Residuals**  
