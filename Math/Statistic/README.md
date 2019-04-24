@@ -231,4 +231,20 @@ lnrModel.betaH1()            # returns 1.025 in this case
 ```python
 lnrModel.betaH0()            # returns -0.0750 in this case
 ```
+# Model Adequacy and Goodness-of-Fit #
+
+**Standardized Residuals**  
+Calculated by subtracting the mean value (zero) and then dividing by the estimated standard deviation.  
+<img src="https://github.com/Amarthgul/studentCalculator/blob/master/Resources/14_res.gif" width="200">  
+
+**Null Hypothesis:**  
+<img src="https://github.com/Amarthgul/studentCalculator/blob/master/Resources/14_h0.gif" width="200">  
+
+**Alternative Hypothesis:**  
+<img src="https://github.com/Amarthgul/studentCalculator/blob/master/Resources/14_ha.gif" width="300">  
+
+**Test Statistic Value** `chi`:  
+<img src="https://github.com/Amarthgul/studentCalculator/blob/master/Resources/14_tsv.gif" width="400">   
+
+
 
