@@ -199,7 +199,7 @@ lnrModel = linearReg([1, 2, 3, 4, 5], [0.92, 2.03, 2.94, 4.10, 5.01]);
 
 **Sxx**  
 `self.Sxx()`: Sum of the squares of the difference between each `x` and the _mean_ `x` value.  
-<img src="https://github.com/Amarthgul/studentCalculator/blob/master/Resources/12_sxx.gif">  
+<img src="https://github.com/Amarthgul/studentCalculator/blob/master/Resources/12_sxx.gif" width="200">  
 ```python
 lnrModel.Sxx()            # returns 10.0 in this case
 ```
@@ -220,7 +220,7 @@ lnrModel.Sxy()            # returns 10.25 in this case
 
 **The x Coefficient**  
 `self.betaH1()`   
-<img src="https://github.com/Amarthgul/studentCalculator/blob/master/Resources/12_bh1.gif">  
+<img src="https://github.com/Amarthgul/studentCalculator/blob/master/Resources/12_bh0.gif">  
 ```python
 lnrModel.betaH1()            # returns 1.025 in this case
 ```
@@ -247,9 +247,6 @@ lnrModel.betaH0()            # returns -0.0750 in this case
 **r**
 Coefficient of determination. `0 <= r^2 <= 1`, it describes the linear relationship between y and x.   
 <img src="https://github.com/Amarthgul/studentCalculator/blob/master/Resources/12_r2.gif" width="200">  
-
-**Sxx**  
-<img src="https://github.com/Amarthgul/studentCalculator/blob/master/Resources/12_sxx.gif" width="300">    
 
 **Variance of beta1**  
 <img src="https://github.com/Amarthgul/studentCalculator/blob/master/Resources/12_var.gif" width="150"> 
