@@ -220,7 +220,7 @@ lnrModel.Sxy()            # returns 10.25 in this case
 
 **The x Coefficient**  
 `self.betaH1()`   
-<img src="https://github.com/Amarthgul/studentCalculator/blob/master/Resources/12_bh0.gif">  
+<img src="https://github.com/Amarthgul/studentCalculator/blob/master/Resources/12_bh1.gif">  
 ```python
 lnrModel.betaH1()            # returns 1.025 in this case
 ```
