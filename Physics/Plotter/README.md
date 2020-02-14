@@ -1,7 +1,8 @@
 
 # dataPlot.py #
 
-Ploting data
+Ploting data with some legends about linear regression results
+
 ```python
     theta = np.arange(60, 30, -5)
     I_muA = np.array([327, 322, 317, 312, 308, 303])
