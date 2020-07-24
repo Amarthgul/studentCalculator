@@ -1,6 +1,13 @@
-
+#==================================================================
+'''============================================================='''
+'''==============With python and Pillow installed==============='''
+'''====================Copy and double click===================='''
+'''============================================================='''
+#==================================================================
 
 import PIL.Image as img
+from PIL import ImageFile
+ImageFile.LOAD_TRUNCATED_IMAGES = True
 import os
 
 test = True
@@ -49,7 +56,7 @@ def findType(tarTypes = ["jpg","png"]):
 
     return imgFiles
 
-def openAndConvert(imgFiles = [], targetFormat ="jpg"):
+def openAndConvert(imgFiles = [], targetFormat ="same"):
 
     outDir = getCurrentFolder() + '\\OutputImages\\'
     if not os.path.exists(outDir):
@@ -58,12 +65,16 @@ def openAndConvert(imgFiles = [], targetFormat ="jpg"):
     for currentImage in imgFiles:
         currentName = currentImage.getName();
         currentExt = currentImage.getExt();
+        currentMode = "RGB"
 
-        im = img.open(currentName + currentExt).convert("RGB")
+        if currentExt in ["png"]:
+            currentMode = "RGBA"
+
+        im = img.open(currentName + currentExt).convert(currentMode) 
 
         extension = currentExt if targetFormat == "same" else targetFormat
 
-        im.save(outDir + currentName + '.' + targetFormat)
+        im.save(outDir + currentName + extension)
 
 #==================================================================
 '''============================================================='''
