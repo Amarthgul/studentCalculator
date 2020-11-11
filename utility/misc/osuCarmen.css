@@ -1,8 +1,13 @@
+@-moz-document regexp(".*osu\\.instructure\\.com.*") {
 /* based on ELMS/Canvas Dark */
 /* https://userstyles.org/styles/178124/elms-canvas-dark */
+:root {
+    --yyQPt-background: #111 !important;
+    /*Discussion List View Check Box Background*/
+}
 
-p{
-    font-size:17px;
+p {
+    font-size: 17px;
 }
 body {
     min-height: 100vh;
@@ -10,6 +15,7 @@ body {
     color: #c3c3c3;
     font-weight: 300;
 }
+
 .ic-Dashboard-header__layout {
     background: #2b2b2b;
     border: none;
@@ -20,10 +26,11 @@ body {
 .ic-DashboardCard__header_content {
     background: #373737;
 }
-DashboardCard__header-term {
+.DashboardCard__header-term {
     color: #cacaca;
 }
-#right-side h2, #right-side .h2 {
+#right-side h2,
+#right-side .h2 {
     color: #c7c7c7;
 }
 a {
@@ -33,10 +40,13 @@ a {
 .ToDoSidebarItem__Icon {
     fill: #c3c3c3 !important;
 }
-.ic-DashboardCard__header-subtitle, .ic-DashboardCard__header-term {
+.ic-DashboardCard__header-subtitle,
+.ic-DashboardCard__header-term {
     color: #cacaca;
 }
-.btn, .Button, .ui-button {
+.btn,
+.Button,
+.ui-button {
     background: #313131;
     color: #fff !important;
 }
@@ -46,7 +56,10 @@ a {
 .ic-DashboardCard__header-button {
     background-color: #0000 !important;
 }
-.btn:hover, .Button:hover, .ui-button:hover, .ui-button.ui-state-hover {
+.btn:hover,
+.Button:hover,
+.ui-button:hover,
+.ui-button.ui-state-hover {
     background: #252525;
     color: #2D3B45;
 }
@@ -90,16 +103,20 @@ a {
     background: #333;
     border: none;
 }
-.item-group-condensed .ig-header{ 
+.item-group-condensed .ig-header {
     background-color: #333;
 }
 .ic-app-course-menu #section-tabs-header-subtitle {
     color: #44c8f5;
 }
-.list-view>ul>li>a, .list-view>nav>ul>li>a {
+.list-view > ul > li > a,
+.list-view > nav > ul > li > a {
     color: #e0e0e0 !important;
 }
-.list-view>ul>li>a:hover, .list-view>ul>li>a:focus, .list-view>nav>ul>li>a:hover, .list-view>nav>ul>li>a:focus {
+.list-view > ul > li > a:hover,
+.list-view > ul > li > a:focus,
+.list-view > nav > ul > li > a:hover,
+.list-view > nav > ul > li > a:focus {
     background: #464646;
 }
 .item-group-condensed .ig-row {
@@ -114,19 +131,22 @@ a {
     background: #272727;
     border-bottom: 1px solid #151414;
 }
-.item-group-condensed .ig-list li:first-child .ig-row, .item-group-condensed .ig-list li:first-of-type .ig-row, .item-group-condensed .first_visible .ig-row {
+.item-group-condensed .ig-list li:first-child .ig-row,
+.item-group-condensed .ig-list li:first-of-type .ig-row,
+.item-group-condensed .first_visible .ig-row {
     border-top: 1px solid #151414;
 }
 .ig-list .ig-row:hover {
     background-color: #1b1b1b;
 }
-#breadcrumbs>ul>li {
+#breadcrumbs > ul > li {
     background: #2b2b2b;
 }
 .ic-Action-header__Heading {
     color: #c3c3c3;
 }
-.user_content, .mceContentBody {
+.user_content,
+.mceContentBody {
     color: #c3c3c3;
 }
 .toolbarView .headerBar {
@@ -140,10 +160,14 @@ a {
 .discussion-header-content {
     color: #c3c3c3;
 }
-#syllabus tr.date.date_passed td, #syllabus tr.date.date_passed th {
+#syllabus tr.date.date_passed td,
+#syllabus tr.date.date_passed th {
     background-color: #383838;
 }
-#syllabus tr.date.related td, #syllabus tr.date.related th, #syllabus tr.date.selected td, #syllabus tr.date.selected th {
+#syllabus tr.date.related td,
+#syllabus tr.date.related th,
+#syllabus tr.date.selected td,
+#syllabus tr.date.selected th {
     background-color: #272727;
 }
 .context_module_item.context_module_item_hover {
@@ -162,11 +186,13 @@ a {
 .question .text {
     background: #333;
 }
-table.summary td, table.summary tbody th {
+table.summary td,
+table.summary tbody th {
     border-bottom: 1px solid #C7CDD1;
     background-color: #2b2b2b;
 }
-.quiz-submission, .question_editing {
+.quiz-submission,
+.question_editing {
     background: #2b2b2b;
     border: none;
 }
@@ -182,13 +208,16 @@ table.summary td, table.summary tbody th {
 .question {
     background-color: #333;
 }
-#calendar-app .fc-month-view .fc-body, #calendar-drag-and-drop-container .fc-month-view .fc-body {
+#calendar-app .fc-month-view .fc-body,
+#calendar-drag-and-drop-container .fc-month-view .fc-body {
     background-color: #1d1d1d;
 }
-#calendar-app .fc-month-view .fc-today, #calendar-drag-and-drop-container .fc-month-view .fc-today {
+#calendar-app .fc-month-view .fc-today,
+#calendar-drag-and-drop-container .fc-month-view .fc-today {
     background: #656565;
 }
-#calendar-app .fc-event, #calendar-drag-and-drop-container .fc-event {
+#calendar-app .fc-event,
+#calendar-drag-and-drop-container .fc-event {
     background-color: #333;
 }
 #context-list .context_list_context {
@@ -200,7 +229,8 @@ table.summary td, table.summary tbody th {
 #context-list .ContextList__MoreBtn {
     background: transparent;
 }
-#context-list-holder, #undated-events {
+#context-list-holder,
+#undated-events {
     background-color: #2b2b2b;
 }
 #undated-events .event {
@@ -209,13 +239,17 @@ table.summary td, table.summary tbody th {
 #minical {
     background-color: #1d1d1d;
 }
-#minical .fc-toolbar h2, #minical .fc-toolbar .h2 {
+#minical .fc-toolbar h2,
+#minical .fc-toolbar .h2 {
     color: #d8d8d8;
 }
 #minical .fc-widget-content {
     color: #fff;
 }
-.btn-group>.btn:hover, .btn-group>.btn:focus, .btn-group>.btn:active, .btn-group>.btn.active {
+.btn-group > .btn:hover,
+.btn-group > .btn:focus,
+.btn-group > .btn:active,
+.btn-group > .btn.active {
     background: #7d7d7d;
     border-color: #fff;
 }
@@ -225,13 +259,15 @@ table.summary td, table.summary tbody th {
 .fc-agenda-view .fc-day-grid {
     background: #0e0e0e;
 }
-#calendar-app .fc-agendaWeek-view .fc-event, #calendar-drag-and-drop-container .fc-agendaWeek-view .fc-event {
+#calendar-app .fc-agendaWeek-view .fc-event,
+#calendar-drag-and-drop-container .fc-agendaWeek-view .fc-event {
     background-color: #000;
 }
 .fc-agendaWeek-view .fc-event-container a[class*="group_"] .fc-content .fc-time {
     color: #9a9a9a;
 }
-.agenda-wrapper , #announcement-details tr:hover{
+.agenda-wrapper,
+#announcement-details tr:hover {
     background-color: #2b2b2b;
 }
 body.primary-nav-expanded .tray-with-space-for-global-nav {
@@ -240,100 +276,350 @@ body.primary-nav-expanded .tray-with-space-for-global-nav {
 .ic-sidebar-logo__image {
     display: none;
 }
-#right-side .events_list .event-details:after, #right-side .events_list .todo-details:after, #right-side .to-do-list .event-details:after, #right-side .to-do-list .todo-details:after, .item-group-condensed, .item-group-container{
+#right-side .events_list .event-details:after,
+#right-side .events_list .todo-details:after,
+#right-side .to-do-list .event-details:after,
+#right-side .to-do-list .todo-details:after,
+.item-group-condensed,
+.item-group-container {
     background: #2b2b2b;
 }
 .conversations .panel {
     background: #212121;
 }
-.message-list .messages>li, .ui-menu, .fc-day, .ui-state-hover, .ui-tabs-active, .tab-holder, .ui-tabs-nav, .ui-dialog-titlebar, #calendar_event_title, #calendar_event_date, #calendar_event_start_time, #calendar_event_end_time, #calendar_event_location_name, #calendar_event_context, #planner_note_title, #planner_note_date, #planner_note_time, #planner_note_context, #details_textarea, .title, .mce-content-body, .mce-edit-area, .input-block-level, .date_field, .time_field, #calendar_event_location_address, .czbXA_bGBk, .czbXA_bGBk div div div div div a, .bwOAM_cwos, #duplicate_interval, #duplicate_frequency, #duplicate_count, .fc-week, .fc-bg, .fc-day-grid, .fc-toolbar, #minical, .ui-dialog-buttonpane, #compose-message-subject, .ui-button, .ac-input-box, .ac-result-container, #titleDiv, .active, .ic-Input, .cAqHo_eAjd, .foKny_EMjX, .sJGfW_bGBk, .eoNrR_blJt, .ColorPicker__Container, .has_event, .stream_header, .dLdjY_bGBk, .dLdjY_bDLZ, .unpinned-discussions-v2__wrapper, .closed-for-comments-discussions-v2__wrapper, #discussion_settings, .deUoG_uUeq, .cDMBL_ssMr, .dNoYT_bGBk, .form-controls, .emptyMessage, .item-group-expandable,#web_conference_title, #web_conference_conference_type, #web_conference_duration, .ui-dialog, #collaboration_collaboration_type, #collaboration_title, .box-with-header, code{
-    background: #333 !important;
+.message-list .messages > li,
+.ui-menu,
+.fc-day,
+.ui-state-hover,
+.ui-tabs-active,
+.tab-holder,
+.ui-tabs-nav,
+.ui-dialog-titlebar,
+#calendar_event_title,
+#calendar_event_date,
+#calendar_event_start_time,
+#calendar_event_end_time,
+#calendar_event_location_name,
+#calendar_event_context,
+#planner_note_title,
+#planner_note_date,
+#planner_note_time,
+#planner_note_context,
+#details_textarea,
+.title,
+.mce-content-body,
+.mce-edit-area,
+.input-block-level,
+.date_field,
+.time_field,
+#calendar_event_location_address,
+.czbXA_bGBk,
+.czbXA_bGBk div div div div div a,
+.bwOAM_cwos,
+#duplicate_interval,
+#duplicate_frequency,
+#duplicate_count,
+.fc-week,
+.fc-bg,
+.fc-day-grid,
+.fc-toolbar,
+#minical,
+.ui-dialog-buttonpane,
+#compose-message-subject,
+.ui-button,
+.ac-input-box,
+.ac-result-container,
+#titleDiv,
+.active,
+.ic-Input,
+.cAqHo_eAjd,
+.foKny_EMjX,
+.sJGfW_bGBk,
+.eoNrR_blJt,
+.ColorPicker__Container,
+.has_event,
+.stream_header,
+.dLdjY_bGBk,
+.dLdjY_bDLZ,
+.unpinned-discussions-v2__wrapper,
+.closed-for-comments-discussions-v2__wrapper,
+#discussion_settings,
+.deUoG_uUeq,
+.cDMBL_ssMr,
+.dNoYT_bGBk,
+.form-controls,
+.emptyMessage,
+.item-group-expandable,
+#web_conference_title,
+#web_conference_conference_type,
+#web_conference_duration,
+.ui-dialog,
+#collaboration_collaboration_type,
+#collaboration_title,
+.box-with-header,
+code {
+    background: rgba(0, 0, 0, 0);
     border-color: #444 !important;
 }
-.message-list .messages>li.active, .ac-input-box, .ef-item-row:hover, .ef-links-col .al-trigger{
+.message-list .messages > li.active,
+.ac-input-box,
+.ef-item-row:hover,
+.ef-links-col .al-trigger {
     background: #2e2e2e !important;
 }
-.roster-tab, .rosterUser{
+.roster-tab,
+.rosterUser {
     background: #2b2b2b !important;
 }
-.roster{
+.roster {
     margin-top: -65px;
 }
-.fvvQs_cMOR{
+.fvvQs_cMOR {
     background: #1115;
     backdrop-filter: blur(3px);
 }
-.author, .username, .message-participants-toggle, .cjUyb_bGBk, .eHiXd_bGBk, .element_toggler, ._xolwpq, .fc-day-header, .navigation_title_text, .ic-app-header__menu-list-item.ic-app-header__menu-list-item--active .ic-app-header__menu-list-link .menu-item__text, .gData td a, .ellipsible, .ef-big-icon, .icon-publish, .btn-add-folder, .btn-upload, .icon-upload, .icon-plus, .icon-assignment, .syllabus_assignment a, .mini-cal-month-and-year, .student_assignment .title a, .icon-user, .available-users a, .ui-state-active .icon-user{
-    color:#E03A3E !important;
+.author,
+.username,
+.message-participants-toggle,
+.cjUyb_bGBk,
+.eHiXd_bGBk,
+.element_toggler,
+._xolwpq,
+.fc-day-header,
+.navigation_title_text,
+.ic-app-header__menu-list-item.ic-app-header__menu-list-item--active .ic-app-header__menu-list-link .menu-item__text,
+.gData td a,
+.ellipsible,
+.ef-big-icon,
+.icon-publish,
+.btn-add-folder,
+.btn-upload,
+.icon-upload,
+.icon-plus,
+.icon-assignment,
+.syllabus_assignment a,
+.mini-cal-month-and-year,
+.student_assignment .title a,
+.icon-user,
+.available-users a,
+.ui-state-active .icon-user {
+    color: #E03A3E !important;
 }
-.date, .cjUyb_pEgL, .fCrpb_bGBk, .course-list-favorite-icon, #section-tabs-header-subtitle{
+.date,
+.cjUyb_pEgL,
+.fCrpb_bGBk,
+.course-list-favorite-icon,
+#section-tabs-header-subtitle {
     color: #eee !important;
 }
-.subject, #calendar_event_title, #calendar_event_date, #calendar_event_start_time, #calendar_event_end_time, #calendar_event_location_name, #calendar_event_context, #planner_note_title, #planner_note_date, #planner_note_time, #planner_note_context, #details_textarea, .title, .mce-content-body, .input-block-level, .date_field, .time_field, #calendar_event_location_address, p, .fTsnK_bGBk, #duplicate_interval, #duplicate_count, .fc-day, .eHiXd_doqw .eHiXd_caGd, .compose-message-subject, textarea, .ac-input-box, .ac-input, i, .cjUyb_ycrn, .eoNrR_blJt, .sJGfW_blJt, .day_number, .dLdjY_bDLZ, #add_discussion, .deUoG_uUeq, .cDMBL_ssMr, .dNoYT_bGBk, .yyQPt_blJt, .eHiXd_caGd, .new-conference-btn .icon-plus, .new-conference-btn,#web_conference_title, #web_conference_conference_type, #web_conference_duration, legend, #collaboration_title{
+.subject,
+#calendar_event_title,
+#calendar_event_date,
+#calendar_event_start_time,
+#calendar_event_end_time,
+#calendar_event_location_name,
+#calendar_event_context,
+#planner_note_title,
+#planner_note_date,
+#planner_note_time,
+#planner_note_context,
+#details_textarea,
+.title,
+.mce-content-body,
+.input-block-level,
+.date_field,
+.time_field,
+#calendar_event_location_address,
+p,
+.fTsnK_bGBk,
+#duplicate_interval,
+#duplicate_count,
+.fc-day,
+.eHiXd_doqw .eHiXd_caGd,
+.compose-message-subject,
+textarea,
+.ac-input-box,
+.ac-input,
+i,
+.cjUyb_ycrn,
+.eoNrR_blJt,
+.sJGfW_blJt,
+.day_number,
+.dLdjY_bDLZ,
+#add_discussion,
+.deUoG_uUeq,
+.cDMBL_ssMr,
+.dNoYT_bGBk,
+.yyQPt_blJt,
+.eHiXd_caGd,
+.new-conference-btn .icon-plus,
+.new-conference-btn,
+#web_conference_title,
+#web_conference_conference_type,
+#web_conference_duration,
+legend,
+#collaboration_title {
     color: #bbb !important;
 }
-.context, .mce-ico, .mce-wordcount, ._1iyfu1y, .message-count, .group-name, .channel-name, .channel-addr, .icon-clock, .icon-check, .icon-calendar-month, .icon-x{
+.context,
+.mce-ico,
+.mce-wordcount,
+._1iyfu1y,
+.message-count,
+.group-name,
+.channel-name,
+.channel-addr,
+.icon-clock,
+.icon-check,
+.icon-calendar-month,
+.icon-x {
     color: #888 !important;
 }
-.ic-icon-svg{
-    fill:#ccc !important;
+.ic-icon-svg {
+    fill: #ccc !important;
 }
-.message-item-view, .message-header, .span8, .message-detail, .span4, .message-list-scroller, .panel, .btn, #conversation_filter, #conversation_filter_select, .ac-input-box, .Button, hr[role="presentation"], .context-list-toggle-box[aria-checked="true"], .event-details-content, .czbXA_bGBk, .dXATK_bGBk[aria-selected="true"], .eHiXd_doqw, #my_courses_table, .course-list-table-row, hr, .ac-token, textarea, .read-state::before, .ef-header, div[role="tablist"] div[role="tab"], legend, .border{
+.message-item-view,
+.message-header,
+.span8,
+.message-detail,
+.span4,
+.message-list-scroller,
+.panel,
+.btn,
+#conversation_filter,
+#conversation_filter_select,
+.ac-input-box,
+.Button,
+hr[role="presentation"],
+.context-list-toggle-box[aria-checked="true"],
+.event-details-content,
+.czbXA_bGBk,
+.dXATK_bGBk[aria-selected="true"],
+.eHiXd_doqw,
+#my_courses_table,
+.course-list-table-row,
+hr,
+.ac-token,
+textarea,
+.read-state::before,
+.ef-header,
+div[role="tablist"] div[role="tab"],
+legend,
+.border {
     border: #373737 !important;
 }
-.ic-app-nav-toggle-and-crumbs, .ef-directory-header, .ef-folder-content, .ef-main, .todo-list-header, td:not(.fc-day), #edit_calendar_event_form_holder, #edit_planner_note_form_holder, .headerBar, .entry-content, .stream-category, #announcement-details, .ic-announcement-row, .ic-item-row, .item-group-condensed{
-    border:#444 !important;
+.ic-app-nav-toggle-and-crumbs,
+.ef-directory-header,
+.ef-folder-content,
+.ef-main,
+.todo-list-header,
+td:not(.fc-day),
+#edit_calendar_event_form_holder,
+#edit_planner_note_form_holder,
+.headerBar,
+.entry-content,
+.stream-category,
+#announcement-details,
+.ic-announcement-row,
+.ic-item-row,
+.item-group-condensed {
+    border: #444 !important;
 }
 
-.ic-app-header__main-navigation, .ic-app-header__menu-list-link--nav-toggle, .al-trigger, .context-list-toggle-box[aria-checked="true"], .ui-tabs-nav, ._1iyfu1y:hover, .dXATK_bGBk[aria-selected="true"], .eHiXd_doqw, .active a, button[data-event="editProfile"], button[data-event="cancelEditProfile"], svg[name="IconCheckMark"], .yyQPt_cjfS .yyQPt_cSXm, div[role="tablist"] div[role="tab"][aria-selected="true"], div[role="tablist"] div[role="tab"]:hover, #add_discussion, #submit_discussion_setting, #apply_select_menus, .new-conference-btn{
-    background: #E03A3E !important;
+.ic-app-header__main-navigation,
+.ic-app-header__menu-list-link--nav-toggle,
+.al-trigger,
+.context-list-toggle-box[aria-checked="true"],
+.ui-tabs-nav,
+._1iyfu1y:hover,
+.dXATK_bGBk[aria-selected="true"],
+.eHiXd_doqw,
+.active a,
+button[data-event="editProfile"],
+button[data-event="cancelEditProfile"],
+svg[name="IconCheckMark"],
+.yyQPt_cjfS .yyQPt_cSXm,
+div[role="tablist"] div[role="tab"][aria-selected="true"],
+div[role="tablist"] div[role="tab"]:hover,
+#add_discussion,
+#submit_discussion_setting,
+#apply_select_menus,
+.new-conference-btn {
+    background: #991B1E !important;
 }
-.fNHEA_cSXm{
-    background:#F01A1E !important;
+.fNHEA_cSXm {
+    background: #F01A1E !important;
 }
-.fc-today, .ac-token, #umVgCsyfGn6y:checked .yyQPt_cSXm, .message-count{
-    background:#502A2E !important;
+.fc-today,
+.ac-token,
+#umVgCsyfGn6y:checked .yyQPt_cSXm,
+.message-count {
+    background: #502A2E !important;
 }
-.message-detail-kyle-menu, .Button--icon-action, .stream-category, .collectionViewItems, .box-with-header{
-    border-radius:3px !important;
+.message-detail-kyle-menu,
+.Button--icon-action,
+.stream-category,
+.collectionViewItems,
+.box-with-header {
+    border-radius: 3px !important;
 }
 
-.student_assignment .title{
+.student_assignment .title {
     background: #2b2b2b !important;
 }
 
-#mceu_35, #mceu_26-body{
+#mceu_35,
+#mceu_26-body {
     background: #2e2e2e !important;
 }
-.menu-item__text, a[href="/about/4363150"],.ic-app-header__menu-list-link, .dialog_opener, a[href="https://umd.instructure.com/about/4363150"], #breadcrumbs a, .accessible-toggler, .student_assignment .title, .available-users a,.eHiXd_brAJ{
-    text-decoration:none !important;
+.menu-item__text,
+a[href="/about/4363150"],
+.ic-app-header__menu-list-link,
+.dialog_opener,
+a[href="https://umd.instructure.com/about/4363150"],
+#breadcrumbs a,
+.accessible-toggler,
+.student_assignment .title,
+.available-users a,
+.eHiXd_brAJ {
+    text-decoration: none !important;
 }
-.eHiXd_brAJ .eHiXd_caGd{
-    color:#E03A3E !important;
+.eHiXd_brAJ .eHiXd_caGd {
+    color: #E03A3E !important;
 }
-.available-users{
-    margin:5px !important;
-    margin-left:8px !important;
+.available-users {
+    margin: 5px !important;
+    margin-left: 8px !important;
 }
-#notification-preferences, .cWmNi_bGBk .bNerA_dTOw, .MlJlv_caGd, td[colspan="3"]{
+#notification-preferences,
+.cWmNi_bGBk .bNerA_dTOw,
+.MlJlv_caGd,
+td[colspan="3"] {
     filter: invert(.8)
 }
-#tool_content{
+#tool_content {
     filter: invert(.83)
 }
-.fNHEA_cSXm, .MlJlv_caGd img, #uYGyDjfTmjj6, .ic-section-tooltip button, .ctf-emoji-button{
-    filter: invert(1) !important;
+
+/* Inverse empty disscussion board color */
+.fNHEA_cSXm, 
+.MlJlv_caGd,
+#uYGyDjfTmjj6,
+.ic-section-tooltip button,
+.ctf-emoji-button {
+    filter: invert(0) !important;
 }
-.menu-item__text{
-    font-weight:700;
+.menu-item__text {
+    font-weight: 700;
 }
-textarea{
+textarea {
     background: #2a2a2a !important;
 }
 .ic-app-header__menu-list-item--active {
     background: #777 !important;
 }
-h3 a, h3 a:hover {
+h3 a,
+h3 a:hover {
     color: #fff !important;
 }
 .ig-list .ig-row .ig-empty-msg {
@@ -345,7 +631,9 @@ h3 a, h3 a:hover {
 .ic-app-header__menu-list-item.ic-app-header__menu-list-item--active .ic-icon-svg {
     fill: #eee !important;
 }
-.item-group-condensed .ig-list li:first-child .ig-row.ig-row-empty, .item-group-condensed .ig-list li:first-of-type .ig-row.ig-row-empty, .item-group-condensed .first_visible .ig-row.ig-row-empty {
+.item-group-condensed .ig-list li:first-child .ig-row.ig-row-empty,
+.item-group-condensed .ig-list li:first-of-type .ig-row.ig-row-empty,
+.item-group-condensed .first_visible .ig-row.ig-row-empty {
     border-top: none;
 }
 #searchTerm {
@@ -366,7 +654,8 @@ h3 a, h3 a:hover {
 .feature-flag {
     color: #c3c3c3;
 }
-i[class*=icon-], i[class^=icon-] {
+i[class*=icon-],
+i[class^=icon-] {
     color: #fff;
 }
 #footer .footer-logo {
@@ -375,13 +664,15 @@ i[class*=icon-], i[class^=icon-] {
 .agenda-day.agenda-today {
     background: #2b2b2b;
 }
-#event-details-trap-focus{
-	background: #232323;
+#event-details-trap-focus {
+    background: #232323;
 }
 .ui-menu-carat span {
     border-color: #232323 #0000;
 }
-.ui-dialog .ui-dialog-titlebar.ui-widget-header, .ui-dialog .ui-datepicker .ui-widget-header.ui-datepicker-header, .ui-datepicker .ui-dialog .ui-widget-header.ui-datepicker-header {
+.ui-dialog .ui-dialog-titlebar.ui-widget-header,
+.ui-dialog .ui-datepicker .ui-widget-header.ui-datepicker-header,
+.ui-datepicker .ui-dialog .ui-widget-header.ui-datepicker-header {
     background: #232323;
 }
 .ui-widget-content {
@@ -411,42 +702,76 @@ pre {
 .pages .header-bar-outer-container {
     display: none;
 }
-textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input {
     background-color: #1d1d1d;
 }
 select {
     background-color: #464646;
     color: #c3c3c3;
 }
-[dir="ltr"] .bwOAM_cwos.bwOAM_EMjX, [dir="ltr"] input[type].bwOAM_cwos.bwOAM_EMjX {
+[dir="ltr"] .bwOAM_cwos.bwOAM_EMjX,
+[dir="ltr"] input[type].bwOAM_cwos.bwOAM_EMjX {
     background: #464646;
     color: #c3c3c3;
 }
-[dir="ltr"] .bwOAM_cwos.bwOAM_EMjX, [dir="ltr"] input[type].bwOAM_cwos.bwOAM_EMjX::placeholder {
+[dir="ltr"] .bwOAM_cwos.bwOAM_EMjX,
+[dir="ltr"] input[type].bwOAM_cwos.bwOAM_EMjX::placeholder {
     color: #c3c3c3;
 }
 .esvoZ_drOs {
     color: #c7cdd1;
 }
-select.ic-Input, textarea.ic-Input, input[type="text"].ic-Input, input[type="password"].ic-Input, input[type="datetime"].ic-Input, input[type="datetime-local"].ic-Input, input[type="date"].ic-Input, input[type="month"].ic-Input, input[type="time"].ic-Input, input[type="week"].ic-Input, input[type="number"].ic-Input, input[type="email"].ic-Input, input[type="url"].ic-Input, input[type="search"].ic-Input, input[type="tel"].ic-Input, input[type="color"].ic-Input, .uneditable-input.ic-Input {
+select.ic-Input,
+textarea.ic-Input,
+input[type="text"].ic-Input,
+input[type="password"].ic-Input,
+input[type="datetime"].ic-Input,
+input[type="datetime-local"].ic-Input,
+input[type="date"].ic-Input,
+input[type="month"].ic-Input,
+input[type="time"].ic-Input,
+input[type="week"].ic-Input,
+input[type="number"].ic-Input,
+input[type="email"].ic-Input,
+input[type="url"].ic-Input,
+input[type="search"].ic-Input,
+input[type="tel"].ic-Input,
+input[type="color"].ic-Input,
+.uneditable-input.ic-Input {
     background: #232323;
     color: #c3c3c3;
-}webkit-scrollbar {
-  width: 10px;
+}
+webkit-scrollbar {
+    width: 10px;
 }
 ::-webkit-scrollbar-track {
-  background-color: #2b2b2b;
+    background-color: #2b2b2b;
 }
 ::-webkit-scrollbar-thumb {
     background-color: #444;
 }
 ::-webkit-scrollbar-thumb:hover {
-   background-color: #4a4a4a;
+    background-color: #4a4a4a;
 }
-#ek-overlay{
+#ek-overlay {
     display: none;
 }
-#ek-modal{
+#ek-modal {
     display: none;
 }
 .student-groups.show-body .student-group-header {
@@ -457,19 +782,25 @@ select.ic-Input, textarea.ic-Input, input[type="text"].ic-Input, input[type="pas
 }
 .alert-info {
     background-color: #1f1f1f;
-    
 }
-.ui-tabs .ui-tabs-nav li.ui-tabs-active a, .ui-tabs .ui-tabs-nav li.ui-state-disabled a, .ui-tabs .ui-tabs-nav li.ui-state-processing a {
+.ui-tabs .ui-tabs-nav li.ui-tabs-active a,
+.ui-tabs .ui-tabs-nav li.ui-state-disabled a,
+.ui-tabs .ui-tabs-nav li.ui-state-processing a {
     cursor: text;
     background: #101010;
 }
 .ic-Table.ic-Table--striped tbody tr:nth-child(odd) {
     background-color: #131313;
 }
-.ic-Table.ic-Table--hover-row tbody tr:hover, .ic-Table.ic-Table--hover-row tbody tr.ic-Table__row--bg-neutral:hover, .ic-Table.ic-Table--hover-row tbody tr.ic-Table__row--bg-success:hover, .ic-Table.ic-Table--hover-row tbody tr.ic-Table__row--bg-alert:hover, .ic-Table.ic-Table--hover-row tbody tr.ic-Table__row--bg-danger:hover {
+.ic-Table.ic-Table--hover-row tbody tr:hover,
+.ic-Table.ic-Table--hover-row tbody tr.ic-Table__row--bg-neutral:hover,
+.ic-Table.ic-Table--hover-row tbody tr.ic-Table__row--bg-success:hover,
+.ic-Table.ic-Table--hover-row tbody tr.ic-Table__row--bg-alert:hover,
+.ic-Table.ic-Table--hover-row tbody tr.ic-Table__row--bg-danger:hover {
     background-color: #404040;
 }
-.ui-tabs .ui-tabs-nav li.ui-state-hover, .ui-tabs .ui-tabs-nav li:hover {
+.ui-tabs .ui-tabs-nav li.ui-state-hover,
+.ui-tabs .ui-tabs-nav li:hover {
     background: #3a3a3a;
     border-color: #272727;
 }
@@ -480,24 +811,64 @@ select.ic-Input, textarea.ic-Input, input[type="text"].ic-Input, input[type="pas
     background: #272727;
     position: relative;
 }
-.star-btn, .star-btn[aria-checked="true"], .star-btn[aria-checked="false"]{
+.star-btn,
+.star-btn[aria-checked="true"],
+.star-btn[aria-checked="false"] {
     background: #0000 !important;
-    text-decoration:none !important;
+    text-decoration: none !important;
 }
 
+
+/* Disscussion board inner background color */
+.ic-discussion-row {
+    background-color: #333 !important;
+}
+/* Closed For Comments Disscussion board background color */
+.discussions-v2__container-image {
+    background-color: #333 !important;
+    border: 0.125rem dashed #fff !important;
+}
+/* Dicussion subscript color */
+.MlJlv_ebWM {
+    color: #aaa;
+}
+/* Collab page font color */
+
+/* Mini calender view linked day background color */
+.day_wrapper[role="link"]{
+    border-radius: 10%;
+    background-color: #666;
+}
+.list-view a.active {
+    background-color: #333;
+}
+/* Left pannel selection highlight color */
+.list-view a.active,
+.list-view a.active:hover,
+.list-view a.active:focus {
+    background: #444;
+}
+.zm-comp-header-figure {
+    filter: invert(1) !important;
+}
 .collectionViewItems .ui-tabs-nav .ui-helper-reset .ui-helper-clearfix .ui-widget-header .ui-corner-all {
     background-color: #333;
 }
-.user_content span {color: #eee !important;}
-.ig-title {
-    color: #eee;
+/* Occonisionally appear in instructor entered text,
+ * which stays black. This is used to change it to white */
+.user_content span {
+    color: #eee !important;
+}
+.item_name {
+    color: #111 !important;
 }
 .ig-details__item {
-    color:#aaa;
+    color: #aaa;
 }
 .zm-comp-header-logo {
     fill: #eee;
 }
 .ant-tabs-tab-active {
     color: #eee;
+}
 }
