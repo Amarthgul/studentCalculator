@@ -1,7 +1,19 @@
-@-moz-document regexp(".*osu\\.instructure\\.com.*") {
+
+/*Current repo: https://github.com/Amarthgul/studentCalculator/blob/master/utility/misc/osuCarmen.css */
 /* based on ELMS/Canvas Dark */
 /* https://userstyles.org/styles/178124/elms-canvas-dark */
+
 :root {
+    --darkGrey: #222 !important;
+    /*  */
+    --defaultGrey: #333 !important;
+    /*  */
+    --lightGrey: #383838 !important;
+    /*  */
+    --whiteGrey: #666 !important;
+    /*  */
+    --pureWhite: #fff !important;
+
     --yyQPt-background: #111 !important;
     /*Discussion List View Check Box Background*/
 }
@@ -77,10 +89,10 @@ a {
 }
 .header-bar {
     border-bottom: none;
-    background-color: #333;
+    background-color: var(--defaultGrey);
 }
 .context_module {
-    background-color: #333;
+    background-color: var(--defaultGrey);
 }
 .item-group-container .item-group-condensed {
     border-bottom: 1px dashed #44c8f5;
@@ -100,11 +112,11 @@ a {
     border: none;
 }
 .item-group-container {
-    background: #333;
+    background: var(--defaultGrey);
     border: none;
 }
 .item-group-condensed .ig-header {
-    background-color: #333;
+    background-color: var(--defaultGrey);
 }
 .ic-app-course-menu #section-tabs-header-subtitle {
     color: #44c8f5;
@@ -125,7 +137,7 @@ a {
 }
 .ig-list .ig-row {
     border-color: #151414;
-    background: #333;
+    background: var(--defaultGrey);
 }
 .item-group-condensed .ig-row {
     background: #272727;
@@ -171,7 +183,7 @@ a {
     background-color: #272727;
 }
 .context_module_item.context_module_item_hover {
-    background: #333;
+    background: var(--defaultGrey);
 }
 .module-sequence-footer .module-sequence-footer-content {
     background: #2b2b2b;
@@ -184,7 +196,7 @@ a {
     background-color: #1b1b1b;
 }
 .question .text {
-    background: #333;
+    background: var(--defaultGrey);
 }
 table.summary td,
 table.summary tbody th {
@@ -206,7 +218,7 @@ table.summary tbody th {
     border-bottom-color: #262626;
 }
 .question {
-    background-color: #333;
+    background-color: var(--defaultGrey);
 }
 #calendar-app .fc-month-view .fc-body,
 #calendar-drag-and-drop-container .fc-month-view .fc-body {
@@ -218,7 +230,7 @@ table.summary tbody th {
 }
 #calendar-app .fc-event,
 #calendar-drag-and-drop-container .fc-event {
-    background-color: #333;
+    background-color: var(--defaultGrey);
 }
 #context-list .context_list_context {
     background: #2b2b2b;
@@ -271,7 +283,7 @@ table.summary tbody th {
     background-color: #2b2b2b;
 }
 body.primary-nav-expanded .tray-with-space-for-global-nav {
-    background: #333;
+    background: var(--defaultGrey);
 }
 .ic-sidebar-logo__image {
     display: none;
@@ -602,7 +614,7 @@ td[colspan="3"] {
 }
 
 /* Inverse empty disscussion board color */
-.fNHEA_cSXm, 
+.fNHEA_cSXm,
 .MlJlv_caGd,
 #uYGyDjfTmjj6,
 .ic-section-tooltip button,
@@ -644,11 +656,11 @@ h3 a:hover {
 }
 .jumbotron {
     color: #fff;
-    background-color: #333;
+    background-color: var(--defaultGrey);
 }
 
 [dir="ltr"] .fLzZc_bxia {
-    background: #333;
+    background: var(--defaultGrey);
 }
 
 .feature-flag {
@@ -819,13 +831,14 @@ webkit-scrollbar {
 }
 
 
+
 /* Disscussion board inner background color */
 .ic-discussion-row {
-    background-color: #333 !important;
+    background-color: var(--defaultGrey) !important;
 }
 /* Closed For Comments Disscussion board background color */
 .discussions-v2__container-image {
-    background-color: #333 !important;
+    background-color: var(--defaultGrey) !important;
     border: 0.125rem dashed #fff !important;
 }
 /* Dicussion subscript color */
@@ -833,14 +846,13 @@ webkit-scrollbar {
     color: #aaa;
 }
 /* Collab page font color */
-
 /* Mini calender view linked day background color */
-.day_wrapper[role="link"]{
+.day_wrapper[role="link"] {
     border-radius: 10%;
     background-color: #666;
 }
 .list-view a.active {
-    background-color: #333;
+    background-color: var(--defaultGrey);
 }
 /* Left pannel selection highlight color */
 .list-view a.active,
@@ -852,7 +864,7 @@ webkit-scrollbar {
     filter: invert(1) !important;
 }
 .collectionViewItems .ui-tabs-nav .ui-helper-reset .ui-helper-clearfix .ui-widget-header .ui-corner-all {
-    background-color: #333;
+    background-color: var(--defaultGrey);
 }
 /* Occonisionally appear in instructor entered text,
  * which stays black. This is used to change it to white */
@@ -870,5 +882,4 @@ webkit-scrollbar {
 }
 .ant-tabs-tab-active {
     color: #eee;
-}
 }
