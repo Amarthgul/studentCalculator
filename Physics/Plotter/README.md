@@ -19,3 +19,7 @@ Ploting data with some legends about linear regression results
 ```
 
 <img src="https://github.com/Amarthgul/studentCalculator/blob/master/Resources/dataPlotClass.png" width="400" height="300">
+
+# GUI_Plotter.py #
+
+A more advanced version, offering a GUI for plot customization and expontential regression  
