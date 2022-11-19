@@ -1,3 +1,12 @@
+/* ==UserStyle==
+@name           OSU Carmen Canvas Dark
+@namespace      USO Archive
+@author         Amarth Gul
+@description    `based on ELMS/Canvas DarkWith subtle modifications to better fit OSU`
+@version        20201116.21.17
+@license        NO-REDISTRIBUTION
+@preprocessor   uso
+==/UserStyle== */
 @-moz-document regexp(".*osu\\.instructure\\.com.*") {
 
 /*Current repo: https://github.com/Amarthgul/studentCalculator/blob/master/utility/misc/osuCarmen.css */
@@ -79,7 +88,7 @@ a {
 .ui-button:hover,
 .ui-button.ui-state-hover {
     background: #252525;
-    color: #2D3B45;
+    color: --pureWhite;
 }
 .ic-Dashboard-header__title {
     color: #cecece;
@@ -836,8 +845,33 @@ webkit-scrollbar {
     text-decoration: none !important;
 }
 
-
-
+    
+    
+    
+    
+    
+    
+/* Side bar in calender */
+.context_list_context{
+    background: var(--defaultGrey);
+}
+/* Comment in assignment */
+.comment-avatar-container{
+    background: var(--defaultGrey);
+}
+.comment-text-comment-container{
+    background: var(--defaultGrey);
+}
+.assignment-student-header{
+    background: var(--defaultGreyLit);
+}
+#comments-tray{
+    background: var(--defaultGrey);
+}
+/* Score value text color highlight */
+.quiz_score .score_value {
+    color: white;
+}
 /* Module section items' small text color */
 .item-group-condensed .ig-header {
     color: #eee;
