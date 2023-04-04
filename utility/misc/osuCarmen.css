@@ -848,8 +848,10 @@ webkit-scrollbar {
     
     
     
-    
-    
+/* Course card view (mainpage) section title */
+.ic-DashboardCard__box__header{
+    background: var(--darkGreyLit)  !important;
+}
     
 /* Side bar in calender */
 .context_list_context{
